@@ -1,3 +1,4 @@
+import estilos from '../estilos/tareas/InputTarea.module.css'
 import { useEffect, useRef, useContext } from "react";
 import { ContextoListaTareas } from '@/App';
 
@@ -11,15 +12,22 @@ export default function BuscadorTareas() {
     const { setConsultaContenidoTarea } = useContext(ContextoListaTareas);
 
     return (
-        <form onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="entradaConsulta">Buscar tarea:</label>
+        <form
+            className={estilos.buscador}
+            onSubmit={(e) => e.preventDefault()}
+        >
+            <label
+                className={estilos.buscadorEtiqueta}
+                htmlFor="entradaConsulta"
+            >Buscar tarea:</label>
             <input
+                className={estilos.buscadorAporte}
                 type='text'
                 id="entradaConsulta"
                 name="entradaConsulta"
                 required
                 minLength="3"
-                maxLength="20"
+                maxLength="200"
                 placeholder="Contenido de la tarea..."
                 ref={campoBusqueda}
                 onChange={(e) => setConsultaContenidoTarea(e.target.value)}

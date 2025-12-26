@@ -1,4 +1,4 @@
-import './App.css';
+import estilos from '@estilos/App.module.css'
 import { createContext, useMemo, useState } from 'react';
 import ListaTareas from '@componentes/tareas/ListaTareas';
 import AgregadorTareas from '@componentes/tareas/AgregadorTareas';
@@ -52,7 +52,8 @@ export default function App() {
 
   return (
     <ContextoListaTareas.Provider value={contextoListaMemorizada}>
-      <main>
+      <main className={estilos.contenidoPrincipal}>
+        <h1 className={estilos.encabezadoPrincipal}>!Flux</h1>
         <BuscadorTareas />
         <AgregadorTareas />
         <ListaTareas />

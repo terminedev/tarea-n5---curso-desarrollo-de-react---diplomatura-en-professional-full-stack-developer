@@ -1,5 +1,6 @@
+import estilos from '../estilos/tareas/ListaTareas.module.css'
 import Tarea from '@componentes/tareas/Tarea';
-import React, { useCallback, useContext, useState } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { ContextoListaTareas } from '@/App'
 
 const TareaMemorizada = React.memo(Tarea);
@@ -22,13 +23,13 @@ export default function ListaTareas() {
 
     // Si NO hay contenido en la lista: 
     if (tareasFiltradasContenido.length <= 0) return (
-        <p>No hay tareas pendientes.</p>
+        <p className={estilos.alerta}>No hay tareas pendientes.</p>
     );
 
     // Si hay contenido: 
     return (
         <>
-            <ul>
+            <ul className={estilos.lista}>
                 {tareasFiltradasContenido.map(tarea => (
                     <TareaMemorizada
                         key={tarea.id}
@@ -40,7 +41,7 @@ export default function ListaTareas() {
                     />
                 ))}
             </ul>
-            <article>
+            <article className={estilos.contadorTareasCompletadas}>
                 Tareas completadas: {cantidadTareasCompletadas} / {tareasFiltradasContenido.length}
             </article>
         </>

@@ -1,0 +1,27 @@
+.alerta,
+.contadorTareasCompletadas {
+    color: rgb(255, 255, 255);
+    margin: 1rem 0px;
+}
+
+.lista {
+    color: rgb(255, 255, 255);
+    margin: 1rem 0px;
+    padding: 1rem;
+
+    width: 20rem;
+    height: 40rem;
+    gap: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    overflow-y: auto;
+
+    background-color: rgba(0, 0, 0, 0.636);
+    border-radius: 1rem;
+
+    scrollbar-color: rgb(255, 255, 255) rgba(255, 0, 0, 0);
+    scrollbar-width: thin;
+}

@@ -1,3 +1,5 @@
+import estilos from '../estilos/tareas/InputTarea.module.css'
+import estiloBoton from '@estilos/BotonInput.module.css'
 import { useContext, useState } from "react";
 import { ContextoListaTareas } from '@/App';
 
@@ -22,15 +24,22 @@ export default function AgregadorTareas() {
     };
 
     return (
-        <form onSubmit={(e) => manejarAgregadorTareas(e)}>
-            <label htmlFor="entradaContenidoNuevaTarea">Agregar tarea:</label>
+        <form
+            className={estilos.buscador}
+            onSubmit={(e) => manejarAgregadorTareas(e)}
+        >
+            <label
+                className={estilos.buscadorEtiqueta}
+                htmlFor="entradaContenidoNuevaTarea"
+            >Agregar tarea:</label>
             <input
+                className={estilos.buscadorAporte}
                 type='text'
                 id="entradaContenidoNuevaTarea"
                 name="entradaContenidoNuevaTarea"
                 required
                 minLength="3"
-                maxLength="20"
+                maxLength="200"
                 placeholder="Ej: Limpiar mi habitación."
                 onChange={(e) => setContenidoNuevaTarea(e.target.value)}
                 value={contenidoNuevaTarea}
@@ -38,6 +47,7 @@ export default function AgregadorTareas() {
 
             <button
                 type="submit"
+                className={estiloBoton.BotonInput}
             >
                 +
             </button>

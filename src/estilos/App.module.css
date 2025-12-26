@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+
+    background: #833AB4;
+    background: linear-gradient(51deg, rgba(131, 58, 180, 1) 0%, rgba(42, 47, 87, 1) 50%, rgba(23, 22, 22, 1) 100%);
+
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    font-family: "Coming Soon", cursive;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contenidoPrincipal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem 0px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.encabezadoPrincipal {
+    color: rgba(255, 255, 255, 0.752);
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin: 2rem 0px;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2560px) {
+    body {
+        font-size: 28px;
+    }
+}
