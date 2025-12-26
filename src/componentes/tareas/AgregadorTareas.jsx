@@ -1,11 +1,12 @@
-import { useState } from "react";
-import useLocalStorage from '@hooks/use-local-storage';
+import { useContext, useState } from "react";
+import { ContextoListaTareas } from '@/App';
 
 export default function AgregadorTareas() {
 
     const [contenidoNuevaTarea, setContenidoNuevaTarea] = useState('');
-    const [, setListaTareas] = useLocalStorage();
+    const { setListaTareas } = useContext(ContextoListaTareas);
 
+    // Se crea una nueva tarea y se implementa en la lista llamando al useLocalStorage. 
     const manejarAgregadorTareas = (e) => {
         e.preventDefault();
 
@@ -31,8 +32,8 @@ export default function AgregadorTareas() {
                 minLength="3"
                 maxLength="20"
                 placeholder="Ej: Limpiar mi habitación."
-                ref={contenidoNuevaTarea}
                 onChange={(e) => setContenidoNuevaTarea(e.target.value)}
+                value={contenidoNuevaTarea}
             />
 
             <button

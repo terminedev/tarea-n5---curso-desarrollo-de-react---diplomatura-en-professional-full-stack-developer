@@ -2,7 +2,8 @@ export default function Tarea({
     id,
     contenido,
     estaCompletada,
-    eliminarTarea
+    eliminarTarea,
+    modificarEstadoCompletada
 }) {
 
     return (
@@ -12,9 +13,9 @@ export default function Tarea({
 
             <button
                 type="button"
-            // onClick={ }
+                onClick={() => modificarEstadoCompletada(id)}
             >
-                ✓
+                ✓ {estaCompletada ? 'Completada' : 'No Completada'}
             </button>
 
             <button
