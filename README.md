@@ -9,12 +9,12 @@ El objetivo principal es poner en práctica:
 - La creación de un **custom hook** para persistir datos en localStorage.
 
 ## 📸 Vista Previa en Escritorio
-(./src/assets/capturas/vista-escritorio-1.png)
-(./src/assets/capturas/vista-escritorio-2.png)
+![Escritorio 1](./src/assets/capturas/vista-escritorio-1.png)
+![Escritorio 2](./src/assets/capturas/vista-escritorio-2.png)
 
-## 📸 Vista Previa en Móbil
-(./src/assets/capturas/vista-mobil-1.png)
-(./src/assets/capturas/vista-mobil-2.png)
+## 📸 Vista Previa en Móvil
+![Móvil 1](./src/assets/capturas/vista-mobil-1.png)
+![Móvil 2](./src/assets/capturas/vista-mobil-2.png)
 
 ## 🚀 Instrucciones de Instalación
 
